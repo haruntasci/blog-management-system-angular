@@ -1,0 +1,24 @@
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">{{dialogHeading}}</h4>
+                <button type="button" class="btn-close" (click)="onClose()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                {{dialogBody}}
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" (click)="onDelete()">Delete</button>
+                <button type="button" class="btn btn-danger" (click)="onClose()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

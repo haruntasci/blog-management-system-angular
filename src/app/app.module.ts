@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertBoxComponent } from './components/alert-box/alert-box.component';
 import { ButtonComponent } from './components/button/button.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertBoxComponent,
-    ButtonComponent
+    ButtonComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
