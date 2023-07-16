@@ -1,0 +1,52 @@
+<table class="table table-light border table-striped table-hover">
+    <thead>
+        <tr>
+            <th *ngFor="let heading of columnHeadingArray">{{heading.text}}</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of gridData | slice: (pageIndex * pageSize): ((pageIndex * pageSize) + pageSize)">
+            <td *ngFor="let heading of columnHeadingArray">
+                <div *ngIf="data[heading.fieldName].id;else thisOne">{{data[heading.fieldName].id | truncate}}</div>
+                <ng-template #thisOne>{{data[heading.fieldName] | truncate}}</ng-template>
+            </td>
+            <td>
+                <button class="btn btn-sm btn-primary" (click)="onDetails(data)">Details<fa-icon class="ms-1"
+                        [icon]="faTableList"></fa-icon></button>
+                <button class="btn btn-sm btn-success ms-2" (click)="onEdit(data)">Edit<fa-icon class="ms-1"
+                        [icon]="faPenToSquare"></fa-icon></button>
+                <button class="btn btn-sm btn-danger ms-2" (click)="onDelete(data)">Delete<fa-icon class="ms-1"
+                        [icon]="faTrash"></fa-icon></button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div class="container d-flex fixed-bottom justify-content-center">
+    <div class="mb-3">
+        <ul class="pagination">
+            <li class="page-item">
+                <button class="page-link fw-medium" type="button" (click)="handlePreviousPage()"
+                    [disabled]="pageIndex === 0">
+                    Previous
+                </button>
+            </li>
+            <li class="page-item"><button [disabled]="true" class="page-link fw-medium">{{pageIndex + 1}}</button>
+            </li>
+            <li>
+                <button [disabled]="true" class="page-link fw-medium">/</button>
+            </li>
+            <li>
+                <button class="page-link fw-medium" (click)="handleLastPage()">{{totalPage}}</button>
+            </li>
+            <li class="page-item">
+                <button class="page-link fw-medium" type="button" (click)="handleNextPage()"
+                    [disabled]="pageIndex === totalPage - 1">
+                    Next
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
