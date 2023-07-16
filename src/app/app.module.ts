@@ -7,7 +7,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableComponent } from './components/table/table.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PipesModule } from "./pipes/pipes.module";
 
 

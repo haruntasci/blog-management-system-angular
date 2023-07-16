@@ -1,0 +1,50 @@
+<!--Main Content-->
+<div class="my-5">
+    <div class="mx-auto w-25" style="max-width:100%;">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center my-3">Update User</h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <!--name-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input id="username" formControlName="username" type="text" name="username"
+                                class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+
+                    <!--Is Active-->
+                    <div class="form-group" id="f-group">
+                        <label for="f-group">Is Active?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" formControlName="isActive" type="radio" name="isActive"
+                                id="is_active1" [value]="true">
+                            <label class="form-check-label" for="is_active1">True</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="isActive" name="isActive"
+                                id="is_active2" [value]="false">
+                            <label class="form-check-label" for="is_active2">False</label>
+                        </div>
+                    </div>
+
+                    <!--Email-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" formControlName="email" type="email" name="email" class="form-control"
+                                placeholder="email" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

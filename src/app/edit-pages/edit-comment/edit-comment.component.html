@@ -1,0 +1,45 @@
+<!--Main Content-->
+<div class="my-5">
+    <div class="mx-auto w-25 " style="max-width:100%;">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center my-3">Edit Comment</h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <!--Is Published-->
+                    <div class="form-group" id="f-group">
+                        <label for="f-group">Is Confirmed?</label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" formControlName="isConfirmed" type="radio"
+                                name="isConfirmed" id="is_active1" [value]="true">
+                            <label class="form-check-label" for="is_active1">True</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" formControlName="isConfirmed"
+                                name="isConfirmed" id="is_active2" [value]="false">
+                            <label class="form-check-label" for="is_active2">False</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="comment" class="form-label">Comment</label>
+                            <textarea id="comment" type="text" formControlName="comment" name="comment"
+                                class="form-control" placeholder="comment ..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
