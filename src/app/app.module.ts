@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertBoxComponent } from './components/alert-box/alert-box.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlertBoxComponent
+    AlertBoxComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
