@@ -10,6 +10,7 @@ import { TableComponent } from './components/table/table.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PipesModule } from "./pipes/pipes.module";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,6 @@ import { PipesModule } from "./pipes/pipes.module";
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     AppRoutingModule,
     PipesModule
   ]

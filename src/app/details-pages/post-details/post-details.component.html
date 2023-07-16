@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <div class="d-flex row">
+        <div class="col-md-8">
+            <div class="d-flex flex-column">
+                <hr>
+                <div class="p-2">
+                    <div class="d-flex flex-row user-info"> <img src="assets/images/avatar.png" width="50" height="50"
+                            class="user-img rounded-circle me-2">
+                        <div class="d-flex flex-column justify-content-start ms-2"><span
+                                class="d-block font-weight-bold name text-primary">User Info -
+                                {{getUsername(post.userId)}}</span><span class="date text-success">Shared publicly -
+                                {{post.creationDate | date}}</span></div>
+                        <div>
+                            <small class="bg-light text-center text-info ms-3"> View Count<fa-icon class="ms-1"
+                                    [icon]="faEye"></fa-icon> -
+                                {{post.viewCount}} </small>
+                        </div>
+                        <div>
+                            <small class="bg-light text-danger ms-3"> Category Info -
+                                {{getCategoryname(post.categoryId)}}
+                            </small>
+                        </div>
+                    </div>
+                    <div class="my-1">
+                        <h1 class="mt-3 mb-3 display-4 fw-normal">{{post.title}}</h1>
+                    </div>
+                    <div class="mt-2">
+                        <p class="fs-5">{{post.content}}</p>
+                    </div>
+                </div>
+                <hr>
+                <h2 class="display-6 fs-4">Comments</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div *ngFor="let comment of comments">
+            <div class="col-md-6 m-2">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h5 class="mt-3 mb-3">Comment id: {{comment.commentId}}</h5>
+                        <p>{{comment.comment}} </p>
+                        <img src="assets/images/avatar.png" width="30" class="user-img rounded-circle mr-2">
+                        <small class="bg-light text-center text-danger me-3"> User Info -
+                            {{getUsername(comment.userId)}}
+                        </small>
+                        <small class="bg-light text-center text-warning me-3"> Post Id - {{comment.postId}}
+                        </small>
+                        <small class="bg-light text-center text-success"> {{comment.creationDate
+                            | date }}
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

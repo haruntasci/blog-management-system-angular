@@ -1,0 +1,33 @@
+<!--Main Content-->
+<div>
+    <h1 class="text-center my-5 display-5">Category Details</h1>
+    <div class="container">
+
+        <table class="table border">
+            <thead>
+                <tr>
+                    <th scope="col">CategoryId</th>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Creation Date</th>
+                    <th scope="col">Post Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{category.categoryId}}</td>
+                    <td>{{category.name}}</td>
+                    <td>{{category.creationDate | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{count}}</td>
+                    <td>
+                        <div class="d-inline me-2">
+                            <button (click)="navigateToPosts()" class="btn btn-info" type="button">Posts</button>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

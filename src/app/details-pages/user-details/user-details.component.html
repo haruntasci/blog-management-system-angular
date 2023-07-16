@@ -1,0 +1,29 @@
+<!--Main Content-->
+<div>
+    <h1 class="text-center my-5 display-5">User Details</h1>
+    <div class="container">
+
+        <table class="table border">
+            <thead>
+                <tr>
+                    <th scope="col">UserId</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Creation Date</th>
+                    <th scope="col">Is Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{user.userId}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.creationDate | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{user.isActive}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
