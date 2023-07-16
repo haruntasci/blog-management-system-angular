@@ -155,7 +155,7 @@ export class PostListComponent implements OnInit, OnDestroy {
 
       this.type = "alert alert-danger";
       this.alertTitle = "Error";
-      this.value = "You cannot delete a post with a comment";
+      this.value = "If the post has a comment, you can't delete it.";
     }
     else {
       this.service.deletePost(id);
