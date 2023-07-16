@@ -1,0 +1,75 @@
+<!--Main Content-->
+<div class="my-5">
+    <div class="mx-auto w-25 " style="max-width:100%;">
+        <div class="card">
+            <div class="card-body bg-light">
+                <h2 class="text-center mb-3">Add Comment</h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <!--userId-->
+
+
+                    <div class="mt-3">
+                        <select class="form-select" aria-label="Default select example" formControlName="postId">
+                            <option [value]="value" disabled>Select a post title</option>
+                            <option *ngFor="let post of posts" [value]="post.postId">
+                                {{post.title}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="my-3">
+                        <select class="form-select" formControlName="userId">
+                            <option [value]="value" disabled>Select a user</option>
+                            <option *ngFor="let user of users" [value]="user.userId" name="userId">
+                                {{user.username}}
+                            </option>
+                        </select>
+                    </div>
+                    <!--Is Confirmed-->
+                    <div class="form-group" id="f-group">
+                        <label for="f-group">Is Confirmed?</label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" formControlName="isConfirmed" type="radio"
+                                name="isConfirmed" id="is_active1" value=true>
+                            <label class="form-check-label" for="is_active1">True</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" formControlName="isConfirmed"
+                                name="isConfirmed" id="is_active2" value=false>
+                            <label class="form-check-label" for="is_active2">False</label>
+                        </div>
+                    </div>
+
+                    <!--Comment-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="content" class="form-label">Comment</label>
+                            <textarea id="comment" type="text" formControlName="comment" name="comment"
+                                class="form-control" placeholder="comment ..." required></textarea>
+                        </div>
+                    </div>
+
+
+                    <!--DOB-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="creationDate" class="form-label">Creation Date</label>
+                            <input id="creationDate" type="date" name="creationDate" formControlName="creationDate"
+                                class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

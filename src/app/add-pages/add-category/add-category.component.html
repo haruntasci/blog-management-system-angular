@@ -1,0 +1,39 @@
+<!--Main Content-->
+<div class="my-5">
+    <div class="mx-auto w-25 " style="max-width:100%;">
+        <div class="card">
+            <div class="card-body bg-light">
+                <h2 class="text-center mb-3">Add Category</h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <!--name-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="categoryname" class="form-label">Category Name</label>
+                            <input id="categoryname" formControlName="name" type="text" name="categoryname"
+                                class="form-control" placeholder="gardening" required>
+                        </div>
+                    </div>
+
+                    <!--DOB-->
+                    <div class="row">
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="creationDate" class="form-label">Creation Date</label>
+                            <input id="creationDate" type="date" name="creationDate" formControlName="creationDate"
+                                class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
