@@ -1,6 +1,8 @@
-# BlogManagementSystemAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+# Blog Management System Angular
+##About
+#### This blog management system app is developed by Harun Taşcı
+#### Below is the video link confirming the requirements for the assignment
+## [DEMO VIDEO LINK](https://www.youtube.com/watch?v=mJiuHUkYgN8) 🎥
 
 ## Development server
 
