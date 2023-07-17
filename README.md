@@ -1,5 +1,5 @@
 # Blog Management System Angular
-##About
+## About
 #### This blog management system app is developed by Harun Taşcı
 #### Below is the video link confirming the requirements for the assignment
 ## [DEMO VIDEO LINK](https://www.youtube.com/watch?v=mJiuHUkYgN8) 🎥
